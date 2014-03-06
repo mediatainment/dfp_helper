@@ -14,7 +14,7 @@ module DfpHelper
       
       _id = "div-gpt-ad-#{@@dfp_helper_id}-#{dfp_helper_slots.size}"
       _size = options[:size] || _i.match(/\d+x\d+/)[0].split('x')
-      _class = options[:class] || banner
+      _class = options[:class] || 'banner'
       dfp_helper_slots << options.merge({:id => _i, :div_id => _id, :size => _size})
       
       raw <<-END.strip
